@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রহরী AUTO-আয় | সীমিত সুযোগ | এখনই যোগ দিন</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px #e2136e, 0 0 40px #e2136e, 0 0 60px #e2136e; }
+            50% { box-shadow: 0 0 40px #e2136e, 0 0 80px #e2136e, 0 0 120px #e2136e; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        
+        @keyframes countdown-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        @keyframes rotate-in {
+            0% { transform: rotate(-180deg) scale(0); opacity: 0; }
+            100% { transform: rotate(0) scale(1); opacity: 1; }
+        }
+        
+        @keyframes slide-up {
+            0% { transform: translateY(100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes neon-flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+            20%, 24%, 55% { opacity: 0.4; }
+        }
+        
+        @keyframes burst {
+            0% { transform: scale(0) rotate(0deg); opacity: 1; }
+            100% { transform: scale(2) rotate(180deg); opacity: 0; }
+        }
+        
+        @keyframes text-reveal {
+            0% { clip-path: inset(0 100% 0 0); }
+            100% { clip-path: inset(0 0 0 0); }
+        }
+        
+        @keyframes bg-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes particle {
+            0% { transform: translateY(0) translateX(0); opacity: 1; }
+            100% { transform: translateY(-100px) translateX(20px); opacity: 0; }
+        }
+        
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        .float { animation: float 4s ease-in-out infinite; }
+        .shake { animation: shake 0.5s ease-in-out infinite; }
+        .countdown-pulse { animation: countdown-pulse 1s ease-in-out infinite; }
+        .glitch:hover { animation: glitch 0.3s ease-in-out infinite; }
+        .shimmer {
+            background: linear-gradient(90deg, #e2136e, #f72585, #e2136e);
+            background-size: 200% auto;
+            animation: shimmer 3s linear infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .rotate-in { animation: rotate-in 1s ease-out forwards; }
+        .neon-flicker { animation: neon-flicker 3s ease-in-out infinite; }
+        .text-reveal { animation: text-reveal 1s ease-out forwards; }
+        
+        .gradient-mesh {
+            background: 
+                radial-gradient(at 40% 20%, #e2136e 0px, transparent 50%),
+                radial-gradient(at 80% 0%, #e100ff 0px, transparent 50%),
+                radial-gradient(at 0% 50%, #00d4ff 0px, transparent 50%),
+                radial-gradient(at 80% 50%, #e2136e 0px, transparent 50%),
+                radial-gradient(at 0% 100%, #00d4ff 0px, transparent 50%),
+                radial-gradient(at 80% 100%, #e100ff 0px, transparent 50%);
+            background-size: 200% 200%;
+            animation: bg-shift 10s ease infinite;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .price-badge {
+            background: linear-gradient(135deg, #ffd700 0%, #ff8c00 50%, #ff4500 100%);
+            background-size: 200% auto;
+            animation: shimmer 2s linear infinite;
+        }
+        
+        .urgent-badge {
+            background: linear-gradient(135deg, #ff0000 0%, #ff6600 50%, #ffcc00 100%);
+            animation: neon-flicker 0.5s ease-in-out infinite;
+        }
+        
+        .bkash-btn {
+            background: linear-gradient(135deg, #e2136e 0%, #c9125c 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .bkash-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(225, 19, 110, 0.6);
+        }
+        
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #e2136e;
+            border-radius: 50%;
+            animation: particle 2s ease-out infinite;
+        }
+        
+        .spot-counter {
+            background: linear-gradient(135deg, #ff0000 0%, #ff4500 100%);
+        }
+        
+        .cta-pulse {
+            animation: pulse-glow 1.5s ease-in-out infinite;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #e2136e;
+            border-radius: 4px;
+        }
+        
+        .scan-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #e2136e, transparent);
+            animation: scan 2s linear infinite;
+        }
+        
+        @keyframes scan {
+            0% { top: 0; opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+        
+        .tier-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+        }
+        
+        .tier-badge::before {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 40px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            transform: rotate(45deg) translate(-70px, 20px);
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .hot-ribbon {
+            position: absolute;
+            top: 20px;
+            left: -10px;
+            background: linear-gradient(135deg, #ff0044, #ff4400);
+            color: white;
+            padding: 5px 40px 5px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            transform: rotate(-45deg);
+        }
+        
+        .hot-ribbon::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+            border-left: 5px solid #ff4400;
+            border-top: 5px solid transparent;
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Floating Particles -->
+    <div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen gradient-mesh relative flex items-center justify-center overflow-hidden">
+        <div class="scan-line"></div>
+        
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl float"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl float" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl float" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <!-- Urgent Top Bar -->
+        <div class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-600 via-orange-500 to-red-600 py-2 overflow-hidden">
+            <div class="flex items-center justify-center gap-4 whitespace-nowrap animate-pulse">
+                <span class="text-sm md:text-base font-bold">🔥 সীমিত সময়ের অফার!</span>
+                <span class="text-yellow-300 font-bold" id="top-countdown">⏰ ১৫:৪৫:৩২ বাকি</span>
+                <span class="text-sm md:text-base font-bold">আপনার কোটা দখল করুন! 🔥</span>
+            </div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 pt-16">
+            <!-- Logo Animation -->
+            <div class="mb-8 rotate-in">
+                <h1 class="text-6xl md:text-8xl font-black mb-2 glitch">
+                    <span class="shimmer">প্রহরী</span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-cyan-400 font-bold tracking-wider neon-flicker">
+                    AUTO-INTELLIGENT আয় সিস্টেম
+                </p>
+            </div>
+            
+            <!-- Main Tagline -->
+            <div class="mb-8 slide-up" style="animation-delay: 0.3s;">
+                <p class="text-xl md:text-3xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                    <span class="text-pink-500 font-bold">বাংলাদেশের প্রথম</span> সম্পূর্ণ অটোমেটেড আয় মেশিন
+                </p>
+                <p class="text-lg text-cyan-300 mt-2">
+                    AI-Powered • ২৪/৭ অটোমেটিক • bKash পেমেন্ট
+                </p>
+            </div>
+            
+            <!-- Spot Counter - Urgency -->
+            <div class="inline-block mb-8 shake">
+                <div class="spot-counter px-6 py-3 rounded-full text-black font-bold text-lg">
+                    <span class="flex items-center gap-2">
+                        <span class="text-2xl">⚡</span>
+                        আজকে মাত্র <span id="spots-left" class="text-yellow-300 text-2xl countdown-pulse">৪৭</span> জনের জন্য সুযোগ!
+                    </span>
+                </div>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
+                <button onclick="scrollToPackages()" class="bkash-btn px-8 py-4 rounded-full text-white font-bold text-xl flex items-center gap-3 cta-pulse">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    প্যাকেজ দেখুন
+                    <span class="animate-bounce">👇</span>
+                </button>
+                <div class="urgent-badge px-6 py-4 rounded-full text-white font-semibold text-center">
+                    <div class="text-sm">এখনই যোগ দিন</div>
+                    <div class="text-2xl font-black">২০২৬ সালের সেরা অফার!</div>
+                </div>
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center gap-6 mb-8">
+                <div class="glass px-6 py-3 rounded-full flex items-center gap-2">
+                    <span class="text-3xl">🤖</span>
+                    <span class="font-semibold">AI-Automated</span>
+                </div>
+                <div class="glass px-6 py-3 rounded-full flex items-center gap-2">
+                    <span class="text-3xl">💰</span>
+                    <span class="font-semibold">Instant Income</span>
+                </div>
+                <div class="glass px-6 py-3 rounded-full flex items-center gap-2">
+                    <span class="text-3xl">🔒</span>
+                    <span class="font-semibold">100% Secure</span>
+                </div>
+                <div class="glass px-6 py-3 rounded-full flex items-center gap-2">
+                    <span class="text-3xl">🎁</span>
+                    <span class="font-semibold">Bonus Rewards</span>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="flex justify-center">
+                <div class="animate-bounce">
+                    <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-black relative">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">
+                    <span class="shimmer">কেন প্রহরী?</span>
+                </h2>
+                <p class="text-xl text-gray-400">বাংলাদেশের সবচেয়ে স্মার্ট আয়ের পদ্ধতি</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="text-5xl mb-4 group-hover:scale-125 transition-transform">🧠</div>
+                    <h3 class="text-xl font-bold text-pink-500 mb-2">AI Intelligence</h3>
+                    <p class="text-gray-400">স্মার্ট AI যাচাই করে অটোমেটিক আয় জেনারেট করে</p>
+                </div>
+                
+                <div class="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="text-5xl mb-4 group-hover:scale-125 transition-transform">⏰</div>
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">২৪/৭ অটোমেটিক</h3>
+                    <p class="text-gray-400">ঘুমালেও আয় চলবে! কোনো কাজ করতে হবে না</p>
+                </div>
+                
+                <div class="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="text-5xl mb-4 group-hover:scale-125 transition-transform">📱</div>
+                    <h3 class="text-xl font-bold text-green-400 mb-2">bKash Direct</h3>
+                    <p class="text-gray-400">সরাসরি bKash-এ টাকা পাবেন, কোনো ঝামেলা নেই</p>
+                </div>
+                
+                <div class="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="text-5xl mb-4 group-hover:scale-125 transition-transform">🚀</div>
+                    <h3 class="text-xl font-bold text-yellow-400 mb-2">Fast Start</h3>
+                    <p class="text-gray-400">৫ মিনিটেই শুরু করুন, আজ থেকেই আয়!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-20 bg-gradient-to-b from-black via-gray-900 to-black relative">
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <div class="urgent-badge inline-block px-6 py-2 rounded-full text-white font-bold text-lg mb-4 shake">
+                    🔥 সীমিত সময়ের অফার! শীঘ্রই শেষ হচ্ছে!
+                </div>
+                <h2 class="text-4xl md:text-6xl font-black mb-4">
+                    <span class="shimmer">প্যাকেজ সিলেক্ট করুন</span>
+                </h2>
+                <p class="text-xl text-gray-400">*শর্তাবলী প্রযোজ্য | প্রতি মাসে টাকা</p>
+            </div>
+            
+            <!-- Packages Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Starter Package - 333 -->
+                <div class="glass-card rounded-3xl overflow-hidden hover:scale-105 transition-all duration-500 group relative">
+                    <div class="bg-gradient-to-br from-green-600 to-green-800 p-6 text-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="absolute top-0 left-0 w-full h-full" style="background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);"></div>
+                        </div>
+                        <span class="relative text-sm font-semibold bg-green-500/50 px-3 py-1 rounded-full">STARTER</span>
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="text-5xl font-black text-green-400 mb-2">৩৩৳</div>
+                        <div class="text-gray-400 mb-4">/মাসে</div>
+                        <ul class="text-left space-y-3 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> বেসিক আয়</li>
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> ২৪/৭ অটোমেটিক</li>
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> AI Support</li>
+                            <li class="flex items-center gap-2 text-gray-500"><span>✗</span> Priority Help</li>
+                        </ul>
+                        <button onclick="selectPackage('৩৩৩', 'STARTER')" class="w-full bg-green-600 hover:bg-green-500 py-3 rounded-full font-bold transition-all">
+                            নিন এখনই!
+                        </button>
+                    </div>
+                    <div class="absolute -bottom-2 -right-2 bg-yellow-500 text-black w-20 h-20 rounded-full flex items-center justify-center font-bold text-xs rotate-12">
+                        সেরা!
+                    </div>
+                </div>
+
+                <!-- Popular Package - 1313 -->
+                <div class="glass-card rounded-3xl overflow-hidden hover:scale-105 transition-all duration-500 relative ring-4 ring-pink-500 transform scale-105">
+                    <div class="hot-ribbon">HOT</div>
+                    <div class="bg-gradient-to-br from-pink-600 to-purple-700 p-6 text-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="scan-line"></div>
+                        </div>
+                        <span class="relative text-sm font-semibold bg-pink-500/50 px-3 py-1 rounded-full animate-pulse">MOST POPULAR 🔥</span>
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="text-5xl font-black text-pink-400 mb-2 countdown-pulse">১৩১৩৳</div>
+                        <div class="text-gray-400 mb-4">/মাসে</div>
+                        <ul class="text-left space-y-3 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> এডভান্সড আয়</li>
+                            <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> ২৪/৭ অটোমেটিক</li>
+                            <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> Premium AI</li>
+                            <li class="flex items-center gap-2"><span class="text-pink-500">✓</span> Priority Help</li>
+                        </ul>
+                        <button onclick="selectPackage('১৩১৩', 'POPULAR')" class="bkash-btn w-full py-3 rounded-full font-bold pulse-glow">
+                            👑 এটাই নিন!
+                        </button>
+                    </div>
+                    <div class="spot-counter absolute top-20 right-0 px-3 py-1 text-xs text-white rounded-l-full">
+                        বাকি ১২!
+                    </div>
+                </div>
+
+                <!-- Pro Package - 3131 -->
+                <div class="glass-card rounded-3xl overflow-hidden hover:scale-105 transition-all duration-500 group relative">
+                    <div class="bg-gradient-to-br from-cyan-600 to-blue-800 p-6 text-center relative">
+                        <span class="text-sm font-semibold bg-cyan-500/50 px-3 py-1 rounded-full">PRO</span>
+                        <div class="absolute top-5 right-5 text-2xl animate-bounce">💎</div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="text-5xl font-black text-cyan-400 mb-2">৩১৩১৳</div>
+                        <div class="text-gray-400 mb-4">/মাসে</div>
+                        <ul class="text-left space-y-3 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-cyan-500">✓</span> ম্যাক্সিমাম আয়</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-500">✓</span> ২৪/৭ VIP Support</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-500">✓</span> Ultimate AI</li>
+                            <li class="flex items-center gap-2"><span class="text-cyan-500">✓</span> এক্সক্লুসিভ ফিচার</li>
+                        </ul>
+                        <button onclick="selectPackage('৩১৩১', 'PRO')" class="w-full bg-cyan-600 hover:bg-cyan-500 py-3 rounded-full font-bold transition-all">
+                            PRO হন!
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Elite Package - 3333 -->
+                <div class="glass-card rounded-3xl overflow-hidden hover:scale-105 transition-all duration-500 group relative">
+                    <div class="bg-gradient-to-br from-yellow-500 to-orange-600 p-6 text-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="absolute top-0 left-0 w-full h-full" style="background: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 20px 20px;"></div>
+                        </div>
+                        <span class="relative text-sm font-semibold bg-yellow-500/50 px-3 py-1 rounded-full flex items-center gap-1 mx-auto">
+                            <span class="text-xl">👑</span> ELITE
+                        </span>
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="text-5xl font-black text-yellow-400 mb-2">৩৩৩৩৳</div>
+                        <div class="text-gray-400 mb-4">/মাসে</div>
+                        <ul class="text-left space-y-3 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-yellow-500">✓</span> আনলিমিটেড আয়</li>
+                            <li class="flex items-center gap-2"><span class="text-yellow-500">✓</span> ২৪/৭ VIP Manager</li>
+                            <li class="flex items-center gap-2"><span class="text-yellow-500">✓</span> Elite AI Access</li>
+                            <li class="flex items-center gap-2"><span class="text-yellow-500">✓</span> Private Community</li>
+                        </ul>
+                        <button onclick="selectPackage('৩৩৩৩', 'ELITE')" class="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 py-3 rounded-full font-bold transition-all text-black">
+                            ELITE হন!
+                        </button>
+                    </div>
+                    <div class="absolute -bottom-2 -left-2 bg-pink-500 text-white w-24 h-24 rounded-full flex items-center justify-center font-bold text-sm -rotate-12 animate-pulse">
+                        লিমিটেড!
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Special Offer Banner -->
+            <div class="mt-12 glass-card rounded-2xl p-8 text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl md:text-3xl font-black text-yellow-400 mb-4 flex items-center justify-center gap-3">
+                        <span class="text-4xl">🎁</span>
+                        স্পেশাল অফার!
+                        <span class="text-4xl">🎁</span>
+                    </h3>
+                    <p class="text-lg text-white mb-4">
+                        আজকে যোগ দিলেই <span class="text-pink-500 font-bold text-2xl">২০% বোনাস</span>!
+                    </p>
+                    <div class="flex items-center justify-center gap-2 text-red-500 font-bold text-xl animate-pulse">
+                        <span>⏰</span>
+                        <span id="offer-countdown">০৫:৩২:১৮</span>
+                        <span>-এর মধ্যে অফার শেষ!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-black relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">
+                    <span class="shimmer">কিভাবে কাজ করে?</span>
+                </h2>
+                <p class="text-xl text-gray-400">মাত্র ৩ সহজ ধাপে শুরু করুন</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center group">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-6xl mx-auto group-hover:scale-110 transition-transform pulse-glow">
+                            1️⃣
+                        </div>
+                        <div class="absolute -top-2 -right-2 text-3xl animate-bounce">👆</div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pink-500 mb-2">প্যাকেজ বাছুন</h3>
+                    <p class="text-gray-400">আপনার সামর্থ্য অনুযায়ী প্যাকেজ সিলেক্ট করুন</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-6xl mx-auto group-hover:scale-110 transition-transform" style="animation: pulse-glow 2s ease-in-out infinite;">
+                            2️⃣
+                        </div>
+                        <div class="absolute -top-2 -right-2 text-3xl animate-bounce" style="animation-delay: 0.5s;">💸</div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-2">bKash পেমেন্ট</h3>
+                    <p class="text-gray-400">bKash দিয়ে পেমেন্ট করুন - সহজ ও নিরাপদ</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-6xl mx-auto group-hover:scale-110 transition-transform" style="animation: pulse-glow 2s ease-in-out infinite 0.5s;">
+                            3️⃣
+                        </div>
+                        <div class="absolute -top-2 -right-2 text-3xl animate-bounce" style="animation-delay: 1s;">🚀</div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-400 mb-2">আয় শুরু!</h3>
+                    <p class="text-gray-400">অটোমেটিক আয় শুরু হয়ে যাবে সাথে সাথে!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="glass-card rounded-3xl max-w-md w-full p-8 relative overflow-hidden animate-bounce-in">
+            <div class="scan-line"></div>
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-red-500/20 text-red-500 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                ✕
+            </button>
+            
+            <div class="text-center">
+                <div class="text-6xl mb-4 shake">💰</div>
+                <h3 class="text-2xl font-black text-pink-500 mb-2">bKash পেমেন্ট</h3>
+                <p class="text-gray-400 mb-6">নিচের নম্বরে টাকা পাঠান</p>
+                
+                <!-- bKash Number -->
+                <div class="bg-gradient-to-r from-pink-600 to-pink-800 rounded-2xl p-6 mb-6 pulse-glow">
+                    <p class="text-sm text-pink-200 mb-2">Send Money / Cash In</p>
+                    <p class="text-3xl font-black text-white tracking-wider" id="bkash-number">01740941168</p>
+                    <button onclick="copyNumber()" class="mt-3 text-sm bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition-all">
+                        📋 কপি করুন
+                    </button>
+                </div>
+                
+                <!-- Selected Package -->
+                <div class="glass rounded-xl p-4 mb-6">
+                    <p class="text-sm text-gray-400">আপনার সিলেক্ট করা প্যাকেজ:</p>
+                    <p class="text-2xl font-black text-yellow-400" id="selected-package">১৩১৳ - POPULAR</p>
+                </div>
+                
+                <!-- Instructions -->
+                <div class="text-left space-y-3 mb-6">
+                    <p class="text-sm text-gray-400">📱 আপনার bKash অ্যাপ খুলুন</p>
+                    <p class="text-sm text-gray-400">💸 "Send Money" বা "Cash In" সিলেক্ট করুন</p>
+                    <p class="text-sm text-gray-400">🔢 উপরের নম্বরে টাকা পাঠান</p>
+                    <p class="text-sm text-gray-400">✅ ট্রানজেকশন স্ক্রিনশট নিন</p>
+                    <p class="text-sm text-gray-400">📧 ইমেইল করুন: <span class="text-cyan-400">raaj33b@gmail.com</span></p>
+                </div>
+                
+                <!-- Copy Email Button -->
+                <button onclick="copyEmail()" class="w-full bg-cyan-600 hover:bg-cyan-500 py-3 rounded-full font-bold transition-all mb-4">
+                    📧 ইমেইল কপি করুন
+                </button>
+                
+                <p class="text-xs text-gray-500">
+                    *শর্তাবলী প্রযোজ্য | পেমেন্ট ভেরিফিকেশন ২৪ ঘন্টার মধ্যে
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-3xl font-black shimmer mb-4">প্রহরী</h3>
+            <p class="text-gray-400 mb-6">বাংলাদেশের প্রথম AI-পাওয়ার্ড অটোমেটেড আয় সিস্টেম</p>
+            
+            <div class="flex justify-center gap-4 mb-6">
+                <a href="mailto:raaj33b@gmail.com" class="glass px-6 py-3 rounded-full flex items-center gap-2 hover:scale-105 transition-all">
+                    <span>📧</span>
+                    <span>raaj33b@gmail.com</span>
+                </a>
+            </div>
+            
+            <p class="text-xs text-gray-600">
+                © ২০২৬ প্রহরী | *শর্তাবলী প্রযোজ্য | সব অধিকার সংরক্ষিত
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        let timeLeft = 15 * 60 * 60 + 45 * 60 + 32; // 15:45:32
+        
+        function updateCountdown() {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            const format = (num) => num.toString().padStart(2, '0').replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
+            
+            document.getElementById('top-countdown').textContent = `⏰ ${format(hours)}:${format(minutes)}:${format(seconds)} বাকি`;
+            document.getElementById('offer-countdown').textContent = `${format(Math.min(5, hours))}:${format(minutes)}:${format(seconds)}`;
+            
+            timeLeft--;
+            if (timeLeft < 0) timeLeft = 15 * 60 * 60;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Spots Counter
+        let spots = 47;
+        
+        function updateSpots() {
+            spots = Math.max(5, spots - Math.floor(Math.random() * 3 - 1));
+            document.getElementById('spots-left').textContent = toBanglaDigits(spots);
+        }
+        
+        function toBanglaDigits(num) {
+            return num.toString().replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
+        }
+        
+        setInterval(updateSpots, 5000);
+        
+        // Scroll to packages
+        function scrollToPackages() {
+            document.getElementById('packages').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Select Package
+        function selectPackage(price, type) {
+            document.getElementById('selected-package').textContent = `${price}৳ - ${type}`;
+            document.getElementById('paymentModal').classList.remove('hidden');
+            document.getElementById('paymentModal').classList.add('flex');
+        }
+        
+        // Close Modal
+        function closeModal() {
+            document.getElementById('paymentModal').classList.add('hidden');
+            document.getElementById('paymentModal').classList.remove('flex');
+        }
+        
+        // Copy Number
+        function copyNumber() {
+            navigator.clipboard.writeText('01740941168');
+            alert('নম্বর কপি হয়েছে! ✅');
+        }
+        
+        // Copy Email
+        function copyEmail() {
+            navigator.clipboard.writeText('raaj33b@gmail.com');
+            alert('ইমেইল কপি হয়েছে! ✅');
+        }
+        
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const colors = ['#e2136e', '#00d4ff', '#ffd700', '#e100ff'];
+            
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.width = Math.random() * 10 + 5 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                particle.style.animationDuration = Math.random() * 3 + 2 + 's';
+                container.appendChild(particle);
+            }
+        }
+        
+        createParticles();
+        
+        // Auto-appearing urgency popup after 30 seconds
+        setTimeout(() => {
+            const popup = document.createElement('div');
+            popup.className = 'fixed bottom-4 right-4 bg-gradient-to-r from-pink-600 to-purple-600 p-6 rounded-2xl shadow-2xl z-40 animate-bounce max-w-sm';
+            popup.innerHTML = `
+                <div class="text-center">
+                    <div class="text-4xl mb-2">🔥</div>
+                    <p class="text-white font-bold">আপনি প্যাকেজ সিলেক্ট করেননি!</p>
+                    <p class="text-sm text-pink-200 mb-3">মাত্র ${toBanglaDigits(spots)} জনের সুযোগ বাকি!</p>
+                    <button onclick="scrollToPackages(); this.parentElement.parentElement.remove();" class="bg-white text-pink-600 px-4 py-2 rounded-full font-bold">
+                        এখনই দেখুন
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(popup);
+        }, 30000);
+    </script>
+</body>
+</html>
