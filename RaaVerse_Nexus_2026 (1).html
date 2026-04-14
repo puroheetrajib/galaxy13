@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>∴ RaaVerse · পহেলা বৈশাখ · নবোবর্ষ ১৪৩২ · JonmoRohossho</title>
+<meta property="og:title" content="∴ RaaVerse · নববর্ষের শক্তি · Limited Slots Available"/>
+<meta property="og:description" content="তারা মিলেছে। নক্ষত্র অনুকূল। আপনার quota এখনও আছে। ৳333 থেকে শুরু।"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#02000a;--deep:#05000f;--card:#0a0018;
+  --neon:#00ffc8;--gold:#f5c842;--pink:#ff2d78;
+  --violet:#9b6fff;--orange:#ff6b00;--green:#00ff88;
+  --bkash:#e2136e;--red:#ff2244;
+  --text:#ede8ff;--dim:#4a3868;
+  --bn:'Hind Siliguri',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --head:'Cinzel Decorative',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--void);color:var(--text);font-family:var(--bn);overflow-x:hidden;}
+
+/* ═══ CANVAS BG ═══ */
+#particle-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;}
+
+/* SCANLINES */
+body::after{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,200,.006) 2px,rgba(0,255,200,.006) 4px);}
+
+/* ═══ COSMIC BG ═══ */
+#cosmos{position:fixed;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 20%,rgba(155,111,255,.2) 0%,transparent 55%),
+    radial-gradient(ellipse 60% 50% at 80% 70%,rgba(226,19,110,.15) 0%,transparent 50%),
+    radial-gradient(ellipse 80% 70% at 50% 90%,rgba(0,255,200,.08) 0%,transparent 60%),
+    radial-gradient(ellipse 100% 100% at 50% 50%,rgba(245,200,66,.04) 0%,transparent 70%),
+    var(--void);}
+
+/* ═══ NOBOBORSHO HEADER ═══ */
+#hero{
+  position:relative;z-index:10;
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:20px;text-align:center;overflow:hidden;
+}
+
+/* Alpona pattern overlay */
+#hero::before{
+  content:'';position:absolute;inset:0;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='35' fill='none' stroke='rgba(245,200,66,.06)' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='25' fill='none' stroke='rgba(0,255,200,.04)' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='15' fill='none' stroke='rgba(155,111,255,.05)' stroke-width='1'/%3E%3Cpath d='M40 5 L43 37 L75 40 L43 43 L40 75 L37 43 L5 40 L37 37 Z' fill='none' stroke='rgba(245,200,66,.04)' stroke-width='.8'/%3E%3C/svg%3E");
+  background-size:80px 80px;
+  animation:alpona-drift 30s linear infinite;
+}
+@keyframes alpona-drift{from{transform:rotate(0deg) scale(1);}to{transform:rotate(360deg) scale(1.02);}}
+
+/* ═══ URGENCY TICKER ═══ */
+#urgency-bar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:linear-gradient(90deg,var(--bkash),var(--pink),var(--violet),var(--pink),var(--bkash));
+  background-size:300%;animation:urgent-scroll 4s linear infinite;
+  padding:6px 0;overflow:hidden;
+}
+@keyframes urgent-scroll{0%{background-position:0%;}100%{background-position:300%;}}
+.ub-inner{
+  display:flex;gap:60px;white-space:nowrap;
+  animation:ticker-run 20s linear infinite;
+  font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;letter-spacing:2px;
+}
+@keyframes ticker-run{from{transform:translateX(0);}to{transform:translateX(-50%);}}\
+
+/* ═══ NAV ═══ */
+#nav{
+  position:fixed;top:30px;left:0;right:0;z-index:90;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 24px;
+  background:rgba(2,0,10,.85);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(155,111,255,.15);
+}
+#nav::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),var(--neon),var(--violet),transparent);
+  animation:border-flow 4s linear infinite;background-size:200%;}
+@keyframes border-flow{0%{background-position:0%;}100%{background-position:200%;}}
+.nav-brand{
+  font-family:var(--head);font-size:14px;letter-spacing:3px;
+  background:linear-gradient(135deg,var(--neon),var(--gold),var(--pink));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 0 12px rgba(0,255,200,.4));
+}
+.nav-links{display:flex;gap:4px;}
+.nav-link{
+  padding:5px 12px;font-size:10px;letter-spacing:1.5px;color:var(--dim);
+  border:1px solid rgba(155,111,255,.1);border-radius:2px;cursor:pointer;
+  transition:.15s;font-family:var(--mono);text-decoration:none;display:block;
+}
+.nav-link:hover{color:var(--neon);border-color:rgba(0,255,200,.3);}
+.nav-cta{
+  padding:6px 16px;background:linear-gradient(135deg,var(--bkash),var(--pink));
+  border:none;color:#fff;font-family:var(--bn);font-size:11px;font-weight:700;
+  cursor:pointer;border-radius:20px;letter-spacing:1px;transition:.2s;
+  animation:cta-pulse 2s ease-in-out infinite;text-decoration:none;display:block;
+}
+@keyframes cta-pulse{0%,100%{box-shadow:0 0 10px rgba(226,19,110,.4);}50%{box-shadow:0 0 25px rgba(226,19,110,.8);}}
+.nav-cta:hover{transform:scale(1.05);}
+
+/* ═══ SLOTS COUNTER ═══ */
+.slots-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 20px;margin-bottom:20px;
+  background:rgba(255,34,68,.1);border:1px solid rgba(255,34,68,.4);border-radius:20px;
+  animation:badge-shake 3s ease-in-out infinite;
+}
+@keyframes badge-shake{0%,100%{transform:scale(1);}90%{transform:scale(.98);}95%{transform:scale(1.02);}}
+.slots-dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red);animation:dot-blink 1s ease-in-out infinite;}
+@keyframes dot-blink{0%,100%{opacity:.4;}50%{opacity:1;}}
+.slots-text{font-size:11px;font-weight:700;color:var(--red);letter-spacing:1.5px;font-family:var(--mono);}
+.slots-num{font-size:18px;font-weight:900;color:#fff;}
+
+/* ═══ MAIN HEADLINE ═══ */
+.hero-overtitle{
+  font-family:var(--bn);font-size:13px;letter-spacing:4px;
+  color:var(--gold);margin-bottom:12px;font-weight:500;
+  text-shadow:0 0 20px rgba(245,200,66,.4);
+}
+.hero-title{
+  font-family:var(--head);
+  font-size:clamp(28px,5vw,64px);
+  letter-spacing:4px;line-height:1.15;
+  background:linear-gradient(135deg,var(--neon) 0%,var(--gold) 40%,var(--pink) 70%,var(--violet) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 0 30px rgba(0,255,200,.3));
+  margin-bottom:10px;
+  animation:title-glow 4s ease-in-out infinite;
+}
+@keyframes title-glow{
+  0%,100%{filter:drop-shadow(0 0 20px rgba(0,255,200,.3));}
+  50%{filter:drop-shadow(0 0 40px rgba(0,255,200,.6)) drop-shadow(0 0 60px rgba(245,200,66,.3));}
+}
+.hero-bn{
+  font-family:var(--bn);
+  font-size:clamp(20px,3.5vw,42px);
+  color:rgba(237,232,255,.7);
+  margin-bottom:6px;font-weight:600;
+}
+.hero-tagline{
+  font-family:var(--mono);font-size:13px;letter-spacing:3px;
+  color:rgba(155,111,255,.6);margin-bottom:30px;
+}
+.hero-sub{
+  font-size:clamp(14px,2vw,18px);color:rgba(237,232,255,.65);
+  max-width:680px;margin:0 auto 35px;line-height:1.9;font-weight:400;
+}
+
+/* ═══ FOMO COUNTDOWN ═══ */
+.countdown-wrap{
+  display:flex;gap:12px;justify-content:center;margin-bottom:35px;flex-wrap:wrap;
+}
+.cd-unit{
+  background:linear-gradient(145deg,rgba(10,0,24,.95),rgba(20,0,40,.9));
+  border:1px solid rgba(226,19,110,.3);border-radius:8px;
+  padding:12px 16px;min-width:70px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.cd-unit::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(226,19,110,.05),transparent);pointer-events:none;}
+.cd-num{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--bkash);display:block;line-height:1;}
+.cd-label{font-size:9px;color:var(--dim);letter-spacing:2px;margin-top:4px;display:block;}
+
+/* ═══ NOBOBORSHO BANNER ═══ */
+.nababorsho-band{
+  position:relative;width:100%;max-width:900px;margin:0 auto 40px;
+  background:linear-gradient(135deg,rgba(245,200,66,.1),rgba(155,111,255,.08),rgba(226,19,110,.1));
+  border:1px solid rgba(245,200,66,.2);border-radius:12px;
+  padding:20px 30px;overflow:hidden;
+}
+.nb-flowers{
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 10% 50%,rgba(245,200,66,.15) 0%,transparent 40%),
+    radial-gradient(circle at 90% 50%,rgba(155,111,255,.12) 0%,transparent 40%);
+  pointer-events:none;
+}
+.nb-title{font-size:clamp(16px,3vw,24px);font-weight:700;color:var(--gold);margin-bottom:8px;}
+.nb-text{font-size:14px;color:rgba(237,232,255,.7);line-height:1.8;}
+.nb-stars{font-size:22px;margin-bottom:8px;display:block;animation:star-rotate 8s linear infinite;}
+@keyframes star-rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+/* ═══ PRICING — THE MASTERPIECE ═══ */
+#pricing{position:relative;z-index:10;padding:80px 20px;}
+.section-title{
+  text-align:center;
+  font-family:var(--head);font-size:clamp(20px,4vw,42px);
+  background:linear-gradient(135deg,var(--gold),var(--neon));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:10px;
+}
+.section-sub{text-align:center;font-size:13px;color:var(--dim);letter-spacing:2px;margin-bottom:50px;font-family:var(--mono);}
+
+.pricing-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;max-width:1200px;margin:0 auto;
+}
+
+/* Each pricing card — Netflix 3D effect */
+.price-card{
+  position:relative;border-radius:16px;padding:30px 24px;
+  background:linear-gradient(145deg,rgba(10,0,24,.95),rgba(20,0,40,.9));
+  border:1px solid rgba(255,255,255,.06);
+  cursor:pointer;transition:all .3s ease;
+  transform-style:preserve-3d;
+  animation:card-float 4s ease-in-out infinite;
+}
+.price-card:nth-child(1){animation-delay:0s;}
+.price-card:nth-child(2){animation-delay:.5s;}
+.price-card:nth-child(3){animation-delay:1s;}
+.price-card:nth-child(4){animation-delay:1.5s;}
+@keyframes card-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.price-card:hover{transform:translateY(-12px) scale(1.02);}
+.price-card::before{
+  content:'';position:absolute;inset:-1px;border-radius:17px;z-index:-1;
+  background:linear-gradient(135deg,var(--card-color1,#9b6fff),var(--card-color2,#00ffc8));
+  opacity:.3;transition:opacity .3s;
+}
+.price-card:hover::before{opacity:.6;}
+
+/* Card shine effect */
+.price-card::after{
+  content:'';position:absolute;top:-50%;left:-60%;width:80%;height:200%;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.05) 50%,transparent 60%);
+  animation:shine 6s ease-in-out infinite;pointer-events:none;
+}
+@keyframes shine{0%,100%{left:-60%;}50%{left:120%;}}
+
+/* Popular badge */
+.popular-badge{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--bkash),var(--pink));
+  padding:4px 16px;border-radius:20px;font-size:10px;font-weight:700;
+  color:#fff;letter-spacing:2px;white-space:nowrap;
+  box-shadow:0 4px 20px rgba(226,19,110,.5);
+  animation:badge-bounce .8s ease-in-out infinite alternate;
+}
+@keyframes badge-bounce{from{transform:translateX(-50%) scale(1);}to{transform:translateX(-50%) scale(1.05);}}
+
+/* FOMO banner on card */
+.card-fomo{
+  background:rgba(255,34,68,.1);border:1px solid rgba(255,34,68,.3);
+  border-radius:6px;padding:5px 10px;margin-bottom:16px;
+  font-size:11px;font-weight:700;color:var(--red);letter-spacing:1px;
+  display:flex;align-items:center;gap:6px;
+}
+.cf-dot{width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);animation:dot-blink 1s infinite;}
+
+.price-icon{font-size:40px;display:block;margin-bottom:12px;text-align:center;}
+.price-tier{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--dim);margin-bottom:6px;font-family:var(--mono);}
+.price-name{font-family:var(--bn);font-size:20px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.price-amount{
+  font-family:var(--mono);margin:16px 0;display:flex;align-items:baseline;gap:4px;
+}
+.pa-currency{font-size:18px;color:var(--dim);}
+.pa-num{
+  font-size:clamp(36px,5vw,52px);font-weight:900;
+  background:linear-gradient(135deg,var(--card-color1,#f5c842),var(--card-color2,#00ffc8));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.pa-period{font-size:13px;color:var(--dim);}
+.price-features{list-style:none;margin:16px 0;display:flex;flex-direction:column;gap:8px;}
+.pf-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:rgba(237,232,255,.7);line-height:1.5;}
+.pf-check{color:var(--neon);font-size:14px;flex-shrink:0;margin-top:1px;}
+.price-cta{
+  width:100%;padding:14px;margin-top:20px;
+  background:linear-gradient(135deg,var(--card-color1,#9b6fff),var(--card-color2,#00ffc8));
+  border:none;color:#fff;font-family:var(--bn);font-size:14px;font-weight:700;
+  border-radius:8px;cursor:pointer;transition:.2s;letter-spacing:1px;
+  position:relative;overflow:hidden;
+}
+.price-cta::before{
+  content:'';position:absolute;top:-50%;left:-60%;width:80%;height:200%;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.2) 50%,transparent 60%);
+  transition:.3s;
+}
+.price-cta:hover::before{left:120%;}
+.price-cta:hover{transform:scale(1.02);box-shadow:0 8px 30px rgba(155,111,255,.4);}
+.price-cond{font-size:10px;color:var(--dim);text-align:center;margin-top:10px;}
+
+/* Card variants */
+.card-basic{--card-color1:#64748b;--card-color2:#94a3b8;}
+.card-silver{--card-color1:#9b6fff;--card-color2:#c084fc;}
+.card-gold{--card-color1:#f5c842;--card-color2:#fb923c;}
+.card-crown{--card-color1:#e2136e;--card-color2:#f43f5e;}
+
+/* ═══ SITES HUB ═══ */
+#hub{position:relative;z-index:10;padding:60px 20px;background:rgba(0,0,0,.3);}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;max-width:1200px;margin:0 auto;}
+.hub-card{
+  position:relative;border-radius:10px;overflow:hidden;
+  background:rgba(10,0,24,.9);border:1px solid rgba(155,111,255,.1);
+  transition:.25s;cursor:pointer;
+}
+.hub-card:hover{border-color:rgba(0,255,200,.3);transform:translateY(-4px);}
+.hub-card-header{
+  padding:12px 16px;display:flex;align-items:center;gap:8px;
+  background:rgba(0,0,0,.4);border-bottom:1px solid rgba(255,255,255,.04);
+}
+.hch-dot{width:8px;height:8px;border-radius:50%;animation:dot-blink 2s infinite;}
+.hch-dot.live{background:var(--green);box-shadow:0 0 8px var(--green);}
+.hch-dot.warm{background:var(--gold);box-shadow:0 0 6px var(--gold);}
+.hch-title{font-size:11px;font-weight:700;color:var(--neon);letter-spacing:1.5px;font-family:var(--mono);flex:1;}
+.hch-link{font-size:9px;color:var(--dim);font-family:var(--mono);text-decoration:none;transition:.15s;}
+.hch-link:hover{color:var(--neon);}
+.hub-frame{width:100%;height:280px;border:none;pointer-events:none;}
+.hub-overlay{
+  position:absolute;bottom:0;left:0;right:0;padding:10px 16px;
+  background:linear-gradient(to top,rgba(2,0,10,.95),transparent);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.ho-label{font-family:var(--bn);font-size:12px;color:var(--text);}
+.ho-btn{
+  padding:5px 12px;background:rgba(0,255,200,.12);border:1px solid rgba(0,255,200,.3);
+  color:var(--neon);font-size:9px;font-family:var(--mono);letter-spacing:1.5px;
+  cursor:pointer;border-radius:2px;text-decoration:none;display:block;transition:.15s;
+}
+.ho-btn:hover{background:rgba(0,255,200,.25);}
+
+/* ═══ bKASH SECTION ═══ */
+#bkash-section{
+  position:relative;z-index:10;padding:80px 20px;
+  background:linear-gradient(135deg,rgba(226,19,110,.08),rgba(155,111,255,.08));
+}
+.bkash-hero{
+  max-width:700px;margin:0 auto;text-align:center;
+}
+.bkash-logo-wrap{
+  width:80px;height:80px;border-radius:50%;
+  background:linear-gradient(135deg,var(--bkash),var(--pink));
+  display:flex;align-items:center;justify-content:center;
+  font-size:36px;margin:0 auto 20px;
+  box-shadow:0 0 40px rgba(226,19,110,.4);
+  animation:logo-pulse 2s ease-in-out infinite;
+}
+@keyframes logo-pulse{0%,100%{box-shadow:0 0 30px rgba(226,19,110,.4);}50%{box-shadow:0 0 60px rgba(226,19,110,.7),0 0 80px rgba(226,19,110,.3);}}
+
+.bkash-number{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  margin:20px 0;padding:16px 24px;
+  background:rgba(226,19,110,.1);border:2px solid rgba(226,19,110,.3);border-radius:12px;
+}
+.bn-label{font-size:11px;color:rgba(226,19,110,.6);letter-spacing:2px;font-family:var(--mono);}
+.bn-number{
+  font-family:var(--mono);font-size:clamp(18px,3vw,28px);font-weight:700;
+  color:#fff;letter-spacing:3px;
+}
+.bn-copy{
+  padding:6px 14px;background:rgba(226,19,110,.2);border:1px solid rgba(226,19,110,.4);
+  color:var(--bkash);font-size:10px;font-family:var(--mono);letter-spacing:1px;
+  cursor:pointer;border-radius:4px;transition:.15s;
+}
+.bn-copy:hover{background:rgba(226,19,110,.35);}
+.bkash-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:30px;}
+.bs-step{
+  padding:16px;background:rgba(10,0,24,.8);border:1px solid rgba(226,19,110,.1);border-radius:8px;
+  text-align:center;
+}
+.bss-num{
+  width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--bkash),var(--pink));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:16px;color:#fff;margin:0 auto 10px;
+}
+.bss-text{font-size:13px;color:rgba(237,232,255,.7);line-height:1.6;}
+
+/* ═══ WIN WIN SECTION ═══ */
+#winwin{position:relative;z-index:10;padding:80px 20px;text-align:center;}
+.ww-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:900px;margin:40px auto 0;}
+.ww-card{
+  padding:24px;border-radius:12px;
+  background:linear-gradient(145deg,rgba(10,0,24,.9),rgba(20,0,40,.8));
+  border:1px solid rgba(255,255,255,.05);
+  position:relative;overflow:hidden;cursor:pointer;transition:.2s;
+}
+.ww-card:hover{transform:translateY(-6px);border-color:rgba(0,255,200,.2);}
+.ww-ico{font-size:36px;display:block;margin-bottom:12px;}
+.ww-title{font-size:15px;font-weight:700;color:var(--neon);margin-bottom:8px;}
+.ww-text{font-size:13px;color:rgba(237,232,255,.65);line-height:1.8;}
+
+/* ═══ SOCIAL CONNECT ═══ */
+#social{position:relative;z-index:10;padding:60px 20px;background:rgba(0,0,0,.2);}
+.social-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:800px;margin:30px auto 0;}
+.social-pill{
+  display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:30px;
+  border:1px solid;text-decoration:none;transition:.2s;font-size:13px;font-weight:600;
+}
+.social-pill:hover{transform:translateY(-3px);filter:brightness(1.2);}
+.sp-fb{border-color:rgba(24,119,242,.4);color:#4a9fff;background:rgba(24,119,242,.1);}
+.sp-ig{border-color:rgba(225,48,108,.4);color:#ff6b9d;background:rgba(225,48,108,.1);}
+.sp-li{border-color:rgba(0,119,181,.4);color:#4db8ff;background:rgba(0,119,181,.1);}
+.sp-tg{border-color:rgba(0,136,204,.4);color:#00ccff;background:rgba(0,136,204,.1);}
+.sp-em{border-color:rgba(155,111,255,.3);color:var(--violet);background:rgba(155,111,255,.08);}
+
+/* ═══ FOOTER SIGIL ═══ */
+#footer{
+  position:relative;z-index:10;padding:50px 20px 30px;
+  text-align:center;border-top:1px solid rgba(155,111,255,.1);
+}
+.footer-sigil{
+  font-family:var(--head);font-size:48px;color:rgba(0,255,200,.2);
+  display:block;margin-bottom:10px;
+  animation:sigil-breathe 4s ease-in-out infinite;
+}
+@keyframes sigil-breathe{0%,100%{opacity:.2;transform:scale(1);}50%{opacity:.4;transform:scale(1.05);}}
+.footer-brand{font-family:var(--head);font-size:16px;letter-spacing:4px;
+  background:linear-gradient(135deg,var(--gold),var(--neon));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:8px;}
+.footer-sacred{font-family:var(--mono);font-size:11px;color:rgba(155,111,255,.3);letter-spacing:4px;margin-bottom:12px;}
+.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;}
+.fl-link{font-size:11px;color:var(--dim);text-decoration:none;transition:.15s;}
+.fl-link:hover{color:var(--neon);}
+
+/* ═══ FLOATING bKASH CTA ═══ */
+#float-cta{
+  position:fixed;bottom:80px;right:20px;z-index:200;
+  display:flex;flex-direction:column;gap:8px;align-items:flex-end;
+}
+.fcta-btn{
+  display:flex;align-items:center;gap:8px;padding:10px 16px;
+  border-radius:30px;border:none;cursor:pointer;font-family:var(--bn);
+  font-size:12px;font-weight:700;letter-spacing:.5px;transition:.2s;
+  box-shadow:0 4px 20px rgba(0,0,0,.4);
+  animation:float-bounce 3s ease-in-out infinite;
+}
+.fcta-btn:hover{transform:scale(1.05);}
+.fb-bkash{background:linear-gradient(135deg,var(--bkash),var(--pink));color:#fff;}
+.fb-tg{background:linear-gradient(135deg,#0088cc,#00aae4);color:#fff;animation-delay:.5s;}
+@keyframes float-bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+
+/* ═══ MODAL ═══ */
+#payment-modal{
+  display:none;position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,10,.95);backdrop-filter:blur(10px);
+  align-items:center;justify-content:center;padding:20px;
+}
+#payment-modal.show{display:flex;}
+.pm-box{
+  background:linear-gradient(145deg,rgba(12,0,28,.98),rgba(18,0,36,.95));
+  border:1px solid rgba(226,19,110,.3);border-radius:16px;
+  padding:30px;max-width:500px;width:100%;position:relative;
+  max-height:90vh;overflow-y:auto;
+}
+.pm-box::before{content:'';position:absolute;top:-1px;left:20%;right:20%;height:2px;
+  background:linear-gradient(to right,transparent,var(--bkash),transparent);}
+.pm-close{position:absolute;top:12px;right:16px;background:none;border:none;color:rgba(226,19,110,.4);font-size:20px;cursor:pointer;}
+.pm-close:hover{color:var(--bkash);}
+.pm-title{font-family:var(--bn);font-size:20px;font-weight:700;color:var(--neon);margin-bottom:6px;}
+.pm-tier{font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:2px;margin-bottom:20px;}
+.pm-amount{
+  text-align:center;padding:20px;
+  background:rgba(226,19,110,.08);border:1px solid rgba(226,19,110,.2);border-radius:10px;
+  margin-bottom:20px;
+}
+.pma-label{font-size:12px;color:var(--dim);margin-bottom:5px;font-family:var(--mono);letter-spacing:1.5px;}
+.pma-amount{font-family:var(--mono);font-size:42px;font-weight:900;color:var(--bkash);}
+.pma-period{font-size:13px;color:var(--dim);}
+.pm-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
+.pm-step{
+  display:flex;align-items:flex-start;gap:10px;padding:10px;
+  background:rgba(0,0,0,.3);border-radius:6px;border:1px solid rgba(255,255,255,.04);
+}
+.pms-num{
+  width:24px;height:24px;border-radius:50%;
+  background:linear-gradient(135deg,var(--bkash),var(--pink));
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:#fff;flex-shrink:0;
+}
+.pms-text{font-size:13px;color:rgba(237,232,255,.7);line-height:1.6;}
+.pm-number-display{
+  background:rgba(226,19,110,.1);border:2px solid rgba(226,19,110,.4);
+  border-radius:8px;padding:12px;text-align:center;margin-bottom:20px;
+}
+.pnd-label{font-size:10px;color:rgba(226,19,110,.6);letter-spacing:2px;margin-bottom:4px;font-family:var(--mono);}
+.pnd-num{font-family:var(--mono);font-size:22px;font-weight:700;color:#fff;letter-spacing:3px;}
+.pm-confirm{
+  width:100%;padding:14px;background:linear-gradient(135deg,var(--bkash),var(--pink));
+  border:none;color:#fff;font-family:var(--bn);font-size:14px;font-weight:700;
+  border-radius:8px;cursor:pointer;letter-spacing:1px;transition:.2s;
+}
+.pm-confirm:hover{transform:scale(1.02);box-shadow:0 8px 30px rgba(226,19,110,.4);}
+
+/* ═══ TOAST ═══ */
+#toast{
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:600;
+  background:rgba(0,255,136,.15);border:1px solid rgba(0,255,136,.4);
+  padding:12px 24px;border-radius:30px;font-family:var(--bn);font-size:13px;color:var(--green);
+  display:none;white-space:nowrap;
+}
+#toast.show{display:block;animation:toast-in .3s ease;}
+@keyframes toast-in{from{opacity:0;transform:translateX(-50%) translateY(10px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:600px){
+  .pricing-grid{grid-template-columns:1fr;}
+  .hub-grid{grid-template-columns:1fr;}
+  .countdown-wrap{gap:8px;}
+  .cd-num{font-size:22px;}
+}
+</style>
+</head>
+<body>
+
+<!-- BACKGROUNDS -->
+<div id="cosmos"></div>
+<canvas id="particle-canvas"></canvas>
+
+<!-- PAYMENT MODAL -->
+<div id="payment-modal">
+  <div class="pm-box">
+    <button class="pm-close" onclick="closeModal()">✕</button>
+    <div class="pm-title" id="pm-title">আপনার প্যাকেজ নিশ্চিত করুন</div>
+    <div class="pm-tier" id="pm-tier">LOADING...</div>
+    <div class="pm-amount">
+      <div class="pma-label">পরিমাণ</div>
+      <div class="pma-amount" id="pm-amount-val">৳0</div>
+      <div class="pma-period">/মাস (শর্ত প্রযোজ্য*)</div>
+    </div>
+    <div class="pm-number-display">
+      <div class="pnd-label">bKASH SEND MONEY</div>
+      <div class="pnd-num">+880 1740-941168</div>
+    </div>
+    <div class="pm-steps">
+      <div class="pm-step"><div class="pms-num">১</div><div class="pms-text">bKash app খুলুন → "Send Money" সিলেক্ট করুন</div></div>
+      <div class="pm-step"><div class="pms-num">২</div><div class="pms-text">নম্বর দিন: <strong>+880 1740-941168</strong> (পরিমাণ: <span id="pm-step-amt">৳0</span>)</div></div>
+      <div class="pm-step"><div class="pms-num">৩</div><div class="pms-text">Reference তে আপনার <strong>জন্মতারিখ + নাম</strong> লিখুন</div></div>
+      <div class="pm-step"><div class="pms-num">৪</div><div class="pms-text">Screenshot পাঠান: <strong>Raaj33b@gmail.com</strong> বা <strong>t.me/SaturnprimeBot</strong></div></div>
+      <div class="pm-step"><div class="pms-num">৫</div><div class="pms-text">২৪ ঘণ্টায় আপনার Blueprint/Reading ready হবে 🔮</div></div>
+    </div>
+    <button class="pm-confirm" onclick="confirmPayment()">✅ আমি পেমেন্ট করলাম — Confirm করুন</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast">✅ আপনার quota নিশ্চিত হয়েছে! Raaj33b@gmail.com এ confirm আসবে।</div>
+
+<!-- URGENCY TICKER -->
+<div id="urgency-bar">
+  <div class="ub-inner" id="ticker-content"></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-brand">∴ RaaVerse</div>
+  <div class="nav-links">
+    <a class="nav-link" href="#pricing">💰 মূল্য</a>
+    <a class="nav-link" href="#hub">🌐 সাইট</a>
+    <a class="nav-link" href="#bkash-section">📱 bKash</a>
+    <a class="nav-link" href="https://t.me/SaturnprimeBot" target="_blank">🤖 Bot</a>
+  </div>
+  <a class="nav-cta" href="#pricing">🔥 এখনই নিন!</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" style="padding-top:90px;">
+  <div style="position:relative;z-index:5;max-width:900px;width:100%;">
+
+    <!-- Nababorsho Band -->
+    <div class="nababorsho-band">
+      <div class="nb-flowers"></div>
+      <span class="nb-stars" style="font-size:30px;">🌸✨🌺✨🌸</span>
+      <div class="nb-title">শুভ নববর্ষ ১৪৩২ 🎊 পহেলা বৈশাখের শক্তিতে তারা মিলেছে</div>
+      <div class="nb-text">এই মুহূর্তে নক্ষত্র অনুকূল। Mercury 16° Ākarṣaṇā active। নতুন বছরের প্রথম আলোয় আপনার ভাগ্য নির্ধারণের সময় এসেছে। Sound. Frequency. Destiny. ∴</div>
+    </div>
+
+    <!-- Slots counter -->
+    <div class="slots-badge" style="position:relative;z-index:5;">
+      <div class="slots-dot"></div>
+      <div class="slots-text">মাত্র <span class="slots-num" id="slots-left">7</span> টা slot বাকি আছে এই মাসে!</div>
+    </div>
+
+    <div class="hero-overtitle">∴ 13 · 33 · 13 · Sound. Frequency. Destiny.</div>
+    <h1 class="hero-title">JonmoRohossho</h1>
+    <h2 class="hero-bn">জন্মরহস্য — আপনার ভবিষ্যৎ, আপনার হাতেই</h2>
+    <div class="hero-tagline">RAAJEEB DAS · SENIOR MERCHANDISER · VEDIC ASTROLOGER · DHAKA</div>
+    <p class="hero-sub">১৬ বছরের গার্মেন্ট অভিজ্ঞতা + Vedic Astrology। Tesco, Walmart, C&A, Benetton — সব জায়গায় pattern দেখেছি। এখন সেই pattern দিয়ে আপনার জীবনের ছক পড়ি। এটা শুধু astrology না — এটা আপনার DNA এর blueprint।</p>
+
+    <!-- Countdown — FOMO Engine -->
+    <div style="font-family:var(--mono);font-size:10px;color:rgba(255,34,68,.6);letter-spacing:2px;margin-bottom:12px;text-align:center;">⏰ এই বিশেষ নববর্ষ অফার শেষ হচ্ছে</div>
+    <div class="countdown-wrap">
+      <div class="cd-unit"><span class="cd-num" id="cd-h">23</span><span class="cd-label">ঘণ্টা</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-m">59</span><span class="cd-label">মিনিট</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-s">59</span><span class="cd-label">সেকেন্ড</span></div>
+    </div>
+
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="#pricing" class="nav-cta" style="font-size:15px;padding:14px 32px;border-radius:30px;text-decoration:none;">
+        🔥 এখনই আমার quota নিশ্চিত করুন!
+      </a>
+      <a href="https://t.me/SaturnprimeBot" target="_blank" style="padding:14px 28px;background:rgba(0,136,204,.2);border:1px solid rgba(0,136,204,.4);color:#00ccff;font-family:var(--bn);font-size:14px;font-weight:700;border-radius:30px;text-decoration:none;display:flex;align-items:center;gap:6px;">
+        🤖 Bot এ জিজ্ঞেস করুন
+      </a>
+    </div>
+
+    <!-- Stats -->
+    <div style="display:flex;gap:30px;justify-content:center;margin-top:40px;flex-wrap:wrap;">
+      <div style="text-align:center;"><div style="font-family:var(--mono);font-size:28px;font-weight:700;color:var(--neon);">2,791</div><div style="font-size:11px;color:var(--dim);letter-spacing:1px;">LinkedIn Connections</div></div>
+      <div style="text-align:center;"><div style="font-family:var(--mono);font-size:28px;font-weight:700;color:var(--gold);">16+</div><div style="font-size:11px;color:var(--dim);letter-spacing:1px;">বছরের অভিজ্ঞতা</div></div>
+      <div style="text-align:center;"><div style="font-family:var(--mono);font-size:28px;font-weight:700;color:var(--violet);">1996</div><div style="font-size:11px;color:var(--dim);letter-spacing:1px;">puroheet since mIRC</div></div>
+      <div style="text-align:center;"><div style="font-family:var(--mono);font-size:28px;font-weight:700;color:var(--pink);">∴ 13</div><div style="font-size:11px;color:var(--dim);letter-spacing:1px;">Sacred Number</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section id="pricing">
+  <div class="section-title">আপনার package বেছে নিন</div>
+  <div class="section-sub">*শর্ত প্রযোজ্য · সীমিত quota · নববর্ষ বিশেষ মূল্য</div>
+
+  <!-- FOMO strip -->
+  <div style="max-width:1200px;margin:0 auto 30px;padding:10px 20px;background:rgba(255,34,68,.08);border:1px solid rgba(255,34,68,.2);border-radius:8px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+    <span style="font-size:16px;">⚠️</span>
+    <span style="font-family:var(--bn);font-size:13px;color:rgba(255,34,68,.8);">এই মুহূর্তে <span id="live-viewers">37</span> জন এই page দেখছেন। শেষ ১ ঘণ্টায় <span style="color:var(--bkash);font-weight:700;">4টা slot</span> নেওয়া হয়েছে। দেরি করলে quota শেষ!</span>
+  </div>
+
+  <div class="pricing-grid">
+
+    <!-- PACKAGE 1 — ৳333 -->
+    <div class="price-card card-basic" onclick="openPayment('মৌলিক Reading','৳333','BASIC · জ্যোতিষ পরিচয়')">
+      <div class="card-fomo"><div class="cf-dot"></div>12 slot বাকি</div>
+      <span class="price-icon">🌙</span>
+      <div class="price-tier">BASIC · পরিচয়</div>
+      <div class="price-name">মৌলিক Reading</div>
+      <div class="price-amount">
+        <span class="pa-currency">৳</span>
+        <span class="pa-num">333</span>
+        <span class="pa-period">/মাস</span>
+      </div>
+      <ul class="price-features">
+        <li class="pf-item"><span class="pf-check">✦</span>জন্মতারিখ analysis (basic)</li>
+        <li class="pf-item"><span class="pf-check">✦</span>সপ্তাহের cosmic energy</li>
+        <li class="pf-item"><span class="pf-check">✦</span>৩টি গুরুত্বপূর্ণ prediction</li>
+        <li class="pf-item"><span class="pf-check">✦</span>Telegram এ delivery</li>
+      </ul>
+      <button class="price-cta">🌙 ৳333 তে শুরু করুন →</button>
+      <div class="price-cond">bKash Send Money · ২৪ ঘণ্টায় delivery</div>
+    </div>
+
+    <!-- PACKAGE 2 — ৳1313 -->
+    <div class="price-card card-silver" onclick="openPayment('Vedic Blueprint','৳1313','SILVER · ভেদিক বিশ্লেষণ')">
+      <div class="popular-badge">⭐ সবচেয়ে জনপ্রিয়</div>
+      <div class="card-fomo"><div class="cf-dot"></div>মাত্র 7 slot বাকি!</div>
+      <span class="price-icon">⭐</span>
+      <div class="price-tier">SILVER · ভেদিক</div>
+      <div class="price-name">Vedic Blueprint</div>
+      <div class="price-amount">
+        <span class="pa-currency">৳</span>
+        <span class="pa-num">1313</span>
+        <span class="pa-period">/মাস</span>
+      </div>
+      <ul class="price-features">
+        <li class="pf-item"><span class="pf-check">✦</span>Full Vedic birth chart analysis</li>
+        <li class="pf-item"><span class="pf-check">✦</span>Dasha period guidance</li>
+        <li class="pf-item"><span class="pf-check">✦</span>১২ মাসের cosmic roadmap</li>
+        <li class="pf-item"><span class="pf-check">✦</span>Gemstone recommendation</li>
+        <li class="pf-item"><span class="pf-check">✦</span>Audio reading (Banglish)</li>
+        <li class="pf-item"><span class="pf-check">✦</span>১টি follow-up Q&A</li>
+      </ul>
+      <button class="price-cta">⭐ ৳1313 — Blueprint নিন →</button>
+      <div class="price-cond">সীমিত quota · নববর্ষ বিশেষ</div>
+    </div>
+
+    <!-- PACKAGE 3 — ৳3131 -->
+    <div class="price-card card-gold" onclick="openPayment('প্রিমিয়াম Dynasty','৳3131','GOLD · ডায়নাস্টি প্যাকেজ')">
+      <div class="card-fomo"><div class="cf-dot"></div>মাত্র 3 slot! 🔥</div>
+      <span class="price-icon">👑</span>
+      <div class="price-tier">GOLD · ডায়নাস্টি</div>
+      <div class="price-name">প্রিমিয়াম Dynasty</div>
+      <div class="price-amount">
+        <span class="pa-currency">৳</span>
+        <span class="pa-num">3131</span>
+        <span class="pa-period">/মাস</span>
+      </div>
+      <ul class="price-features">
+        <li class="pf-item"><span class="pf-check">✦</span>D-1 to D-150 full divisional analysis</li>
+        <li class="pf-item"><span class="pf-check">✦</span>Numerology + name correction</li>
+        <li class="pf-item"><span class="pf-check">✦</span>Panchapakshi birth bird reading</li>
+        <li class="pf-item"><span class="pf-check">✦</span>Relationship & career timing</li>
+        <li class="pf-item"><span class="pf-check">✦</span>৩টি follow-up sessions</li>
+        <li class="pf-item"><span class="pf-check">✦</span>Video consultation (30 min)</li>
+        <li class="pf-item"><span class="pf-check">✦</span>Remedy protocol (herbal + mantra)</li>
+      </ul>
+      <button class="price-cta">👑 ৳3131 — Dynasty নিন →</button>
+      <div class="price-cond">৩টি slot মাত্র বাকি · এখনই নিন</div>
+    </div>
+
+    <!-- PACKAGE 4 — ৳3333 CROWN -->
+    <div class="price-card card-crown" onclick="openPayment('∴ Crown Lifetime','৳3333','CROWN · সর্বোচ্চ · জীবনভর')">
+      <div class="popular-badge" style="background:linear-gradient(135deg,#f5c842,#fb923c);">👑 CROWN EXCLUSIVE</div>
+      <div class="card-fomo" style="background:rgba(245,200,66,.1);border-color:rgba(245,200,66,.3);color:var(--gold);">
+        <div class="cf-dot" style="background:var(--gold);box-shadow:0 0 8px var(--gold);"></div>
+        এই মাসে মাত্র 1 slot বাকি!
+      </div>
+      <span class="price-icon" style="font-size:50px;">∴</span>
+      <div class="price-tier" style="color:var(--gold);">CROWN · জীবনভর সাথে</div>
+      <div class="price-name" style="color:var(--gold);">∴ Crown Dynasty</div>
+      <div class="price-amount">
+        <span class="pa-currency">৳</span>
+        <span class="pa-num" style="background:linear-gradient(135deg,#f5c842,#fb923c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">3333</span>
+        <span class="pa-period">/মাস</span>
+      </div>
+      <ul class="price-features">
+        <li class="pf-item"><span class="pf-check" style="color:var(--gold);">✦</span>পুরো Kolpobrikkho Blueprint (∴)</li>
+        <li class="pf-item"><span class="pf-check" style="color:var(--gold);">✦</span>Monthly live consultation</li>
+        <li class="pf-item"><span class="pf-check" style="color:var(--gold);">✦</span>Real-time planetary alerts</li>
+        <li class="pf-item"><span class="pf-check" style="color:var(--gold);">✦</span>RaaVerse VIP Telegram group</li>
+        <li class="pf-item"><span class="pf-check" style="color:var(--gold);">✦</span>Dynasty Vault access (secrets)</li>
+        <li class="pf-item"><span class="pf-check" style="color:var(--gold);">✦</span>Unlimited Q&A for 1 year</li>
+        <li class="pf-item"><span class="pf-check" style="color:var(--gold);">✦</span>Family members included (2)</li>
+        <li class="pf-item"><span class="pf-check" style="color:var(--gold);">✦</span>∴ 13 · Sacred protection rituals</li>
+      </ul>
+      <button class="price-cta" style="background:linear-gradient(135deg,#f5c842,#fb923c);color:#000;">👑 ৳3333 — Crown নিন →</button>
+      <div class="price-cond" style="color:rgba(245,200,66,.4);">শেষ 1 slot · এই মাসে আর নেই</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ SITES HUB ═══ -->
+<section id="hub">
+  <div class="section-title">RaaVerse Ecosystem</div>
+  <div class="section-sub">আমাদের সব সাইট — একজায়গায়</div>
+  <div class="hub-grid">
+
+    <div class="hub-card">
+      <div class="hub-card-header">
+        <div class="hch-dot live"></div>
+        <div class="hch-title">প্রহরী · VIGIL Intelligence</div>
+        <a class="hch-link" href="https://prohori.up.railway.app/" target="_blank">↗ full screen</a>
+      </div>
+      <iframe class="hub-frame" src="https://prohori.up.railway.app/" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+      <div class="hub-overlay">
+        <div class="ho-label">🌍 Global Intelligence Terminal</div>
+        <a class="ho-btn" href="https://prohori.up.railway.app/" target="_blank">OPEN →</a>
+      </div>
+    </div>
+
+    <div class="hub-card">
+      <div class="hub-card-header">
+        <div class="hch-dot live"></div>
+        <div class="hch-title">CRUCIX Monitor</div>
+        <a class="hch-link" href="https://crucix-production-409b.up.railway.app/" target="_blank">↗ full screen</a>
+      </div>
+      <iframe class="hub-frame" src="https://crucix-production-409b.up.railway.app/" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+      <div class="hub-overlay">
+        <div class="ho-label">⚡ Wartime Intelligence</div>
+        <a class="ho-btn" href="https://crucix-production-409b.up.railway.app/" target="_blank">OPEN →</a>
+      </div>
+    </div>
+
+    <div class="hub-card">
+      <div class="hub-card-header">
+        <div class="hch-dot warm"></div>
+        <div class="hch-title">Raajeeb — Lovable Portfolio</div>
+        <a class="hch-link" href="https://raajeeb.lovable.app/" target="_blank">↗ full screen</a>
+      </div>
+      <iframe class="hub-frame" src="https://raajeeb.lovable.app/" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+      <div class="hub-overlay">
+        <div class="ho-label">🌌 Personal Brand Site</div>
+        <a class="ho-btn" href="https://raajeeb.lovable.app/" target="_blank">OPEN →</a>
+      </div>
+    </div>
+
+    <div class="hub-card">
+      <div class="hub-card-header">
+        <div class="hch-dot warm"></div>
+        <div class="hch-title">RaaLlem — Learning Platform</div>
+        <a class="hch-link" href="https://raallem.lovable.app/" target="_blank">↗ full screen</a>
+      </div>
+      <iframe class="hub-frame" src="https://raallem.lovable.app/" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+      <div class="hub-overlay">
+        <div class="ho-label">📚 Knowledge Platform</div>
+        <a class="ho-btn" href="https://raallem.lovable.app/" target="_blank">OPEN →</a>
+      </div>
+    </div>
+
+    <div class="hub-card">
+      <div class="hub-card-header">
+        <div class="hch-dot live"></div>
+        <div class="hch-title">Arena AI — Income Engine</div>
+        <a class="hch-link" href="https://019d8981-0a2d-7a33-b7c4-c53b64eab11c.arena.site/" target="_blank">↗ full screen</a>
+      </div>
+      <iframe class="hub-frame" src="https://019d8981-0a2d-7a33-b7c4-c53b64eab11c.arena.site/" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+      <div class="hub-overlay">
+        <div class="ho-label">💰 Local Income 2026</div>
+        <a class="ho-btn" href="https://019d8981-0a2d-7a33-b7c4-c53b64eab11c.arena.site/" target="_blank">OPEN →</a>
+      </div>
+    </div>
+
+    <div class="hub-card">
+      <div class="hub-card-header">
+        <div class="hch-dot warm"></div>
+        <div class="hch-title">Prohori AI — Manus Space</div>
+        <a class="hch-link" href="https://prohori-ai-lmkgzw6g.manus.space/" target="_blank">↗ full screen</a>
+      </div>
+      <iframe class="hub-frame" src="https://prohori-ai-lmkgzw6g.manus.space/" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+      <div class="hub-overlay">
+        <div class="ho-label">🤖 AI Prohori Terminal</div>
+        <a class="ho-btn" href="https://prohori-ai-lmkgzw6g.manus.space/" target="_blank">OPEN →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ bKASH ═══ -->
+<section id="bkash-section">
+  <div style="text-align:center;">
+    <div class="section-title" style="-webkit-text-fill-color:transparent;background:linear-gradient(135deg,var(--bkash),var(--pink));-webkit-background-clip:text;background-clip:text;">সহজ payment — bKash এ</div>
+    <div class="section-sub">SEND MONEY করুন, ২৪ ঘণ্টায় আপনার reading ready</div>
+  </div>
+  <div class="bkash-hero">
+    <div class="bkash-logo-wrap">💳</div>
+    <div style="font-family:var(--bn);font-size:22px;font-weight:700;color:var(--text);margin-bottom:8px;">bKash এ সরাসরি পাঠান</div>
+    <div style="font-size:14px;color:rgba(237,232,255,.6);margin-bottom:20px;">কোনো জটিলতা নেই। কোনো ঝামেলা নেই।<br>শুধু Send Money করুন, তারপর screenshot পাঠান।</div>
+    <div class="bkash-number">
+      <div>
+        <div class="bn-label">bKash NUMBER</div>
+        <div class="bn-number">+880 1740-941168</div>
+      </div>
+      <button class="bn-copy" onclick="copyNumber()">COPY</button>
+    </div>
+    <div class="bkash-steps">
+      <div class="bs-step">
+        <div class="bss-num">১</div>
+        <div class="bss-text">bKash app খুলুন<br>"Send Money" চাপুন</div>
+      </div>
+      <div class="bs-step">
+        <div class="bss-num">২</div>
+        <div class="bss-text">নম্বর: <strong>01740941168</strong><br>আপনার package amount দিন</div>
+      </div>
+      <div class="bs-step">
+        <div class="bss-num">৩</div>
+        <div class="bss-text">Reference এ নাম + জন্মতারিখ লিখুন</div>
+      </div>
+      <div class="bs-step">
+        <div class="bss-num">৪</div>
+        <div class="bss-text">Screenshot পাঠান Bot এ<br>@SaturnprimeBot</div>
+      </div>
+    </div>
+    <div style="margin-top:30px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+      <button onclick="openPayment('আপনার পছন্দের প্যাকেজ','৳1313','সবচেয়ে জনপ্রিয়')" style="padding:14px 28px;background:linear-gradient(135deg,var(--bkash),var(--pink));border:none;color:#fff;font-family:var(--bn);font-size:14px;font-weight:700;border-radius:30px;cursor:pointer;transition:.2s;">💳 এখনই pay করুন</button>
+      <a href="mailto:Raaj33b@gmail.com" style="padding:14px 24px;background:rgba(155,111,255,.15);border:1px solid rgba(155,111,255,.3);color:var(--violet);font-family:var(--bn);font-size:14px;font-weight:600;border-radius:30px;text-decoration:none;display:flex;align-items:center;">📧 Email করুন</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WIN WIN ═══ -->
+<section id="winwin">
+  <div class="section-title">Win-Win Philosophy</div>
+  <div class="section-sub">আপনার জয় = আমার জয় · সবার জয়</div>
+  <div class="ww-grid">
+    <div class="ww-card">
+      <span class="ww-ico">🎯</span>
+      <div class="ww-title">আপনার Win</div>
+      <div class="ww-text">জীবনের সঠিক সময়ে সঠিক সিদ্ধান্ত। চাকরি, ব্যবসা, সম্পর্ক — সব কিছুর cosmic timing জানুন।</div>
+    </div>
+    <div class="ww-card">
+      <span class="ww-ico">🌱</span>
+      <div class="ww-title">আমার Win</div>
+      <div class="ww-text">প্রতিটা satisfied client আমার brand। আপনার জীবন ভালো হলে JonmoRohossho এগিয়ে যায়। Win-win always।</div>
+    </div>
+    <div class="ww-card">
+      <span class="ww-ico">🌍</span>
+      <div class="ww-title">সবার Win</div>
+      <div class="ww-text">বাংলাদেশের digital economy তে contribute। Local expertise, global wisdom। Together we grow।</div>
+    </div>
+    <div class="ww-card">
+      <span class="ww-ico">∴</span>
+      <div class="ww-title">Universe জানে</div>
+      <div class="ww-text">Sound. Frequency. Destiny. যখন সবাই জেতে, universe ও rejoice করে। এটাই RaaVerse এর philosophy।</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOCIAL ═══ -->
+<section id="social" style="text-align:center;">
+  <div class="section-title" style="font-size:clamp(18px,3vw,32px);">Connect করুন</div>
+  <div class="social-grid">
+    <a class="social-pill sp-fb" href="https://facebook.com/puroheet" target="_blank">📘 Facebook · puroheet</a>
+    <a class="social-pill sp-ig" href="https://instagram.com/laboratorians2000" target="_blank">📸 Instagram · laboratorians2000</a>
+    <a class="social-pill sp-li" href="https://linkedin.com/in/puroheet" target="_blank">💼 LinkedIn · puroheet · 2,791 conn</a>
+    <a class="social-pill sp-tg" href="https://t.me/SaturnprimeBot" target="_blank">✈️ @SaturnprimeBot</a>
+    <a class="social-pill sp-tg" href="https://t.me/eshokhelakoriBot" target="_blank">🤖 @eshokhelakoriBot</a>
+    <a class="social-pill sp-em" href="mailto:Raaj33b@gmail.com">📧 Raaj33b@gmail.com</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer id="footer">
+  <span class="footer-sigil">∴</span>
+  <div class="footer-brand">RaaVerse · JonmoRohossho</div>
+  <div class="footer-sacred">13 · 33 · 13 · Sound · Frequency · Destiny · 377108</div>
+  <div class="footer-links">
+    <a class="fl-link" href="https://raajeeb.lovable.app/" target="_blank">Portfolio</a>
+    <a class="fl-link" href="https://t.me/SaturnprimeBot" target="_blank">Telegram Bot</a>
+    <a class="fl-link" href="https://prohori.up.railway.app/" target="_blank">প্রহরী</a>
+    <a class="fl-link" href="https://linkedin.com/in/puroheet" target="_blank">LinkedIn</a>
+    <a class="fl-link" href="mailto:Raaj33b@gmail.com">Contact</a>
+  </div>
+  <div style="font-size:11px;color:rgba(74,56,104,.5);font-family:var(--mono);">© 2026 RaaVerse · Raaj33b@gmail.com · Dhaka, Bangladesh · ∴ 13</div>
+</footer>
+
+<!-- FLOATING CTA -->
+<div id="float-cta">
+  <button class="fcta-btn fb-bkash" onclick="openPayment('সবচেয়ে জনপ্রিয়','৳1313','SILVER · ভেদিক Blueprint')">💳 bKash — ৳1313</button>
+  <a class="fcta-btn fb-tg" href="https://t.me/SaturnprimeBot" target="_blank" style="text-decoration:none;">🤖 @SaturnprimeBot</a>
+</div>
+
+<script>
+// ═══ PARTICLE CANVAS ═══
+(()=>{
+  const c=document.getElementById('particle-canvas');
+  const ctx=c.getContext('2d');
+  c.width=window.innerWidth;c.height=window.innerHeight;
+  window.addEventListener('resize',()=>{c.width=window.innerWidth;c.height=window.innerHeight;});
+  const particles=[];
+  const colors=['rgba(0,255,200,','rgba(245,200,66,','rgba(155,111,255,','rgba(226,19,110,','rgba(0,255,136,'];
+  for(let i=0;i<120;i++){
+    particles.push({
+      x:Math.random()*c.width,y:Math.random()*c.height,
+      vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.3,
+      r:Math.random()*1.8+.3,
+      color:colors[Math.floor(Math.random()*colors.length)],
+      alpha:Math.random()*.6+.1,
+      pulse:Math.random()*Math.PI*2,pulseSpeed:Math.random()*.02+.005,
+    });
+  }
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    particles.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;p.pulse+=p.pulseSpeed;
+      if(p.x<0)p.x=c.width;if(p.x>c.width)p.x=0;
+      if(p.y<0)p.y=c.height;if(p.y>c.height)p.y=0;
+      const a=p.alpha*(0.5+0.5*Math.sin(p.pulse));
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.color+a+')';ctx.fill();
+      // Glow
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r*3,0,Math.PI*2);
+      ctx.fillStyle=p.color+(a*.1)+')';ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ═══ TICKER ═══
+const TICKER_MSGS=[
+  '🔥 নববর্ষ বিশেষ অফার — সীমিত সময়ের জন্য',
+  '⚡ Mercury 16° Ākarṣaṇā ACTIVE — এই মুহূর্তই সঠিক সময়',
+  '✨ শুভ নববর্ষ ১৪৩২ — তারা মিলেছে',
+  '🌸 পহেলা বৈশাখের শক্তিতে আপনার ভাগ্য পড়ুন',
+  '💳 bKash: +880 1740-941168 · Raaj33b@gmail.com',
+  '🤖 @SaturnprimeBot — Telegram এ reading নিন',
+  '🔮 JonmoRohossho · Sound. Frequency. Destiny. · ∴ 13',
+  '⭐ Zone 1 ACTIVE — Mercury AD চলছে · এখনই সুযোগ',
+];
+const tickerContent=document.getElementById('ticker-content');
+[...TICKER_MSGS,...TICKER_MSGS].forEach(m=>{
+  const s=document.createElement('span');s.textContent=m;
+  tickerContent.appendChild(s);
+});
+
+// ═══ COUNTDOWN ═══
+let countdownEnd=Date.now()+23*3600000+59*60000+59000;
+function updateCountdown(){
+  const diff=Math.max(0,countdownEnd-Date.now());
+  const h=Math.floor(diff/3600000);
+  const m=Math.floor((diff%3600000)/60000);
+  const s=Math.floor((diff%60000)/1000);
+  document.getElementById('cd-h').textContent=String(h).padStart(2,'0');
+  document.getElementById('cd-m').textContent=String(m).padStart(2,'0');
+  document.getElementById('cd-s').textContent=String(s).padStart(2,'0');
+  if(diff===0)countdownEnd=Date.now()+23*3600000;
+}
+setInterval(updateCountdown,1000);updateCountdown();
+
+// ═══ LIVE VIEWERS SIMULATION ═══
+let viewers=37;
+setInterval(()=>{
+  viewers=Math.max(20,viewers+(Math.random()>.5?1:-1)*Math.floor(Math.random()*3+1));
+  const el=document.getElementById('live-viewers');if(el)el.textContent=viewers;
+},5000);
+
+// ═══ SLOTS COUNTER ═══
+let slots=7;
+setInterval(()=>{
+  if(Math.random()<.03&&slots>1){
+    slots--;
+    const el=document.getElementById('slots-left');
+    if(el)el.textContent=slots;
+  }
+},10000);
+
+// ═══ PAYMENT MODAL ═══
+function openPayment(name,amount,tier){
+  document.getElementById('pm-title').textContent=name;
+  document.getElementById('pm-tier').textContent=tier;
+  document.getElementById('pm-amount-val').textContent=amount;
+  document.getElementById('pm-step-amt').textContent=amount;
+  document.getElementById('payment-modal').classList.add('show');
+}
+function closeModal(){document.getElementById('payment-modal').classList.remove('show');}
+document.getElementById('payment-modal').addEventListener('click',e=>{
+  if(e.target===document.getElementById('payment-modal'))closeModal();
+});
+function confirmPayment(){
+  closeModal();showToast();
+  if(slots>1)slots--;
+  const el=document.getElementById('slots-left');if(el)el.textContent=slots;
+}
+
+// ═══ COPY NUMBER ═══
+function copyNumber(){
+  navigator.clipboard.writeText('+8801740941168').then(()=>{showToast('📋 নম্বর copy হয়েছে! bKash এ paste করুন।');});
+}
+
+// ═══ TOAST ═══
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg||'✅ আপনার quota নিশ্চিত! Raaj33b@gmail.com এ confirm আসবে।';
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),4000);
+}
+
+// ═══ 3D CARD TILT ═══
+document.querySelectorAll('.price-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const rect=card.getBoundingClientRect();
+    const x=(e.clientX-rect.left)/rect.width-.5;
+    const y=(e.clientY-rect.top)/rect.height-.5;
+    card.style.transform=`translateY(-12px) rotateX(${-y*8}deg) rotateY(${x*8}deg) scale(1.02)`;
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform='';
+  });
+});
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+</script>
+</body>
+</html>
